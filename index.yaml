@@ -1,0 +1,11 @@
+---
+default:
+  perl: /usr/bin/perl
+  name: seco-awesomerange
+  summary: local awesome test replacement for Seco::Range
+  version: '1.0.3'
+  usr-perl: 1
+  requires:
+    - librange
+    - perl
+

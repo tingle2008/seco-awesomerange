@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# Perl wants to rewrite these files.
+export PERL=/usr/bin/perl
+export PREFIX=/usr
+export PERLINSTALL=/usr
+
+cd seco-awesomerange
+pwd | grep '/tmp/' && chmod  u+w const-*.inc
+PERLTEST=no /usr/share/multipkg/scripts/build
+cd ..
+
+cd Class-Accessor-0.34
+PERLTEST=no /usr/share/multipkg/scripts/build
+cd ..
+
+cd seco-core
+PERLTEST=no /usr/share/multipkg/scripts/build
+cd ..
+
+cd DateTime-0.74
+PERLTEST=no /usr/share/multipkg/scripts/build
+cd ..
+
+
+rm -rf $DESTDIR/usr/local/share/man
