@@ -1,11 +1,15 @@
 ---
 default:
-  perl: /usr/bin/perl
   name: seco-awesomerange
-  summary: local awesome test replacement for Seco::Range
+  summary: rangestack awesomerange Seco::AwesomeRange
   version: '1.0.3'
-  usr-perl: 1
+  release: 1
+  perl: '/usr/bin/perl'
   requires:
     - librange
     - perl
+
+deb:
+  dirtransforms:
+    - { from : 'usr/lib64' , to : 'usr/lib' }
 
